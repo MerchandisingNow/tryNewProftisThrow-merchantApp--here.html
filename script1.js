@@ -238,6 +238,9 @@ function ajout_panier() {
     pu = Number.parseFloat(prix);
     pt = pu * quantite;
     sourc_p = document.getElementById('imagedisp').src;
+    
+    if ((quantite == null)||(quantite == undefined) || (quantite == 0)) quantite = 1;
+    if (quantite < 0) quantite *= (-1);
 
     j = localStorage.getItem("total_p");
     prod1 = localStorage.getItem("prod_panier");
