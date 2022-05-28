@@ -241,7 +241,7 @@ function ajout_panier() {
     
     if ((quantite == null)||(quantite == undefined) || (quantite == 0)) quantite = 1;
     if (quantite < 0) quantite *= (-1);
-    if (coul.includes("hoisissez")) {
+    if (coul.includes('couleur')) {
         coul = "Une couleur en stock";
     }
 
