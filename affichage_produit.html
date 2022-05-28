@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="logo.png" />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="for_page2.css" />
+    <link rel="stylesheet" href="slider.css" />
+    <script src="script1.js"></script>
+    <!--<script src="for_page2.js"></script>-->
+    <title>Marchand</title>
+</head>
+
+<body onload="showprod()">
+    <!--onload pour changer l'image l'image à l'affichage-->
+    <header class="page_header">
+        <!--Entête du site-->
+        <div class="header_nav">
+            <div class="back_home">
+                <a href="page_accueil.html" class="home_link" title="Cliquez pour revenir à l'accueil"> 🏡 Accueil </a>
+            </div>
+            <a href="panier.html" class="button_link" id="but_pan">
+                <!--<button class="button_nav"><a href="panier.html" class="panier_link" title="Cliquez pour accéder à votre panier "><span class="emoji_panier">🗑</span> panier</a></button>-->
+            </a>
+        </div>
+    </header>
+    <div class="sticky_div">
+        <!--Zone de recherche des produits-->
+        <label>Recherchez un produit</label><br>
+        <input type="text" class="input_search" placeholder="Rechercher produit..." />
+        <a href="page_accueil.html"><input type="submit" class="button_search" onclick="search_prod()" value="Chercher" /></a>
+    </div>
+    <div class="div_block">
+        <section class="section_principale">
+            <article class="article_for_image" id="disp">
+                <!--
+                <div>
+                    <img alt="produit à afficher" id="imagedisp" src="" class="image_toshow"/>
+                </div>-->
+            </article>
+            <aside class="display_img_attributes">
+                <div>
+                    <fieldset class="attributs_produit" id="">
+                        <legend class="informations_base">Categorie : </legend>
+                        <p>Libellé :<span id="lib"> Ordinateur </span> </p>
+                        <p>Prix unitaire : <span id="up"> 100000 <span id="unit">XAF</span></span>
+                        </p>
+                        <!--<a href=""><input type="button"  value="   voir produits similaires >>   "/></a>-->
+                    </fieldset>
+                    <fieldset class="pour_commande">
+                        <legend class="informations_commande">Informations sur achat</legend>
+                        <label for="quantite">Quantité :</label>
+                        <br>
+                        <input type="number" placeholder="1" min="1" required id="qte" /><br>
+                        <br>
+                        <label for="couleur">Couleur :</label>
+                        <br>
+
+                        <select size="1" id="clr">
+                            <option id="dft_color" class="default_color"><span id="default_color">  Choisissez une couleur...  </span></option>
+                            <option>noire</option>
+                            <option>bleue</option>
+                            <option>verte</option>
+                            <option>orange</option>
+                            <option>jaune</option>
+                            <option>rouge</option>
+                            <option>blanche</option>
+                        </select><br><br><br>
+                        <fieldset class="">
+                            <legend class="legend_prod">Valider et ajouter au panier</legend>
+                            <a href="#" target="_parent"><input type="submit" onclick="ajout_panier()" value="Enregistrer..." /></a>
+                        </fieldset>
+                    </fieldset>
+                    <fieldset class="">
+                        <legend class="">Zone de commentaire</legend>
+                        <textarea class="zone_commentaire" rows="10">Ecrivez un commentaire pour donner votre avis du produit
+                        </textarea>
+                        <input type="button" class="" value="   Envoyez le commentaire   " />
+                    </fieldset>
+                </div><br>
+            </aside>
+        </section>
+    </div>
+    <br>
+
+    <footer class="page_footer">
+        <div class="footer_download"><br>
+            <p></p>
+            <p><a class="download_apps" href="https://github.com/MerchandisingNow/download-APPOnGitHub.html-/raw/main/Merchant%20APP.apk"><b>Téléchargez notre application mobile...</b></a></p>
+            <p><a class="download_apps" href="https://play.google.com/store/apps/details?id=com.waaza.faroty"><b>Téléchargez l'app mobile faroty...</b></a></p>
+        </div>
+        <div class="div_footer">
+            <div class="footer_inline_div">
+                <h2>Nos magasins</h2>
+                <p>Faroty (Bonamoussadi Terminus)</p>
+                <p>Boutique (Akwa face city sport)</p>
+            </div>
+            <div class="footer_inline_div">
+                <h2>Nos Règles et Conditions</h2>
+                <p><a class="conditions_rules" href="conditions.html">Conditons d'utilisation</a></p>
+                <p><a class="conditions_rules" href="regles.html">Nos règles</a></p>
+            </div>
+            <div class="footer_inline_div">
+                <h2>Contactez-nous</h2>
+                <p>+237 693-42-98-61</p>
+                <p><a class="contact_mail" href="mailto:josemonro067@gmail.com">josemonro067@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="copy_right">
+            <p class="cp_right"><a href="cv.html" class="cp_right"><b>Copyright@</b> </a>-Tous droits réservés !<br>2022</p>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+<!-- Bouton de téléchargement de l'app mobile
+
+    <a href="">
+        <button class="button_nav"><a href="application.html" title="Cliquez pour accéder à votre panier ">Téléchargez l'app mobile</a></button>
+    </a>
+-->

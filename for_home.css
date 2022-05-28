@@ -1,0 +1,79 @@
+.sticky_div{
+    background-color: rgb(39, 38, 38);
+    float: right;
+    margin-top: 1%;
+    width: max-content;
+    color: white;
+    padding-left: 79%;
+    margin-left: 1%;
+    padding-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 0.2%;
+}
+.principal_div{
+    align-self: center;
+    align-content: center;
+    background-color: rgb(241, 247, 248);
+    padding: 1%;
+}
+.h2_explain{
+    align-self: center;
+    align-content: center;
+    font-size: 125%;
+    font-weight: bold;
+    text-align: center;
+}
+.entete_principale{
+    align-self: center;
+    align-content: center;
+    background-color: rgb(247, 247, 246);
+    margin: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 3%;
+    border-radius: 10px;
+}
+.welcome_word{
+    text-align: center;
+    color: rgb(180, 90, 192);
+    text-transform: capitalize;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 200%;
+}
+.p_categorie{
+    font-weight: bolder;
+}
+.image-display {
+    display: inline-block;
+    width: 100%;
+}
+.iframe{
+    width: 100%;
+    min-height: 100%;
+}
+.iframe iframe{
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+}
+.image-display div nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 1%;
+}
+.image-display div nav{
+    background-color: rgb(87, 87, 92);
+}
+.image-display div nav ul li button {
+    background-color: rgb(87, 87, 92);
+    border-radius: 1px;
+}
+.image-display div nav ul li button a{
+    font-size: 150%;
+    margin: 0 2%;
+    color: white;
+}
+.image_toshow{
+    padding: 2% 0;
+}
