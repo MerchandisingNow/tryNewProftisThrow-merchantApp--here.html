@@ -241,6 +241,7 @@ function ajout_panier() {
     
     if ((quantite == null)||(quantite == undefined) || (quantite == 0)) quantite = 1;
     if (quantite < 0) quantite *= (-1);
+    if (coul.includes('sissez')) coul = " une couleur en stock";
 
     pt = pu * quantite;
     j = localStorage.getItem("total_p");
