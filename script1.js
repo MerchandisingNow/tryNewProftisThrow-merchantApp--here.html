@@ -1,9 +1,10 @@
 //document.querySelector('.image-display').innerHTML = card;
 
 //localStorage.setItem("panier",pan);
-localStorage.setItem("prod_panier","");
-localStorage.setItem("total_p","0");
-localStorage.setItem("telechargements","0");
+//localStorage.setItem("prod_panier","");
+//localStorage.setItem("total_p","0");
+localStorage.setItem("telechargements", "0");
+
 //affichage_produit.html.querySelector('article_for_image').innerHTML = ;
 let j = 0;
 let i = 0;
@@ -236,21 +237,19 @@ function ajout_panier() {
     nprod = document.getElementById('lib').innerHTML;
     devise = document.getElementById('unit').innerHTML;
     pu = Number.parseFloat(prix);
-    
-    sourc_p = document.getElementById('imagedisp').src;
-    
-    if ((quantite == null)||(quantite == undefined) || (quantite == 0)) quantite = 1;
-    if (quantite < 0) quantite *= (-1);
-    if (coul.includes('couleur')) {
-        coul = "Une couleur en stock";
-    }
 
+    sourc_p = document.getElementById('imagedisp').src;
+
+    if ((quantite == null) || (quantite == undefined) || (quantite == 0)) quantite = 1;
+    if (quantite < 0) quantite *= (-1);
     pt = pu * quantite;
+
     j = localStorage.getItem("total_p");
     prod1 = localStorage.getItem("prod_panier");
     if (prod1 == null) {
         prod1 = " ";
     }
+    if (coul.includes('sissez')) coul = " une couleur en stock";
     if (j == null) {
         j = '0';
         i = 0;
@@ -329,4 +328,99 @@ function produits_panier() {
         //after_sup();
     } else if (localStorage.getItem("delete-state") == "1") {
         //localStorage.setItem("prod_panier"," ");
-        
+        l = `
+            <p class="inneretat"><h1>Votre panier est vide !</h1></p>
+        `;
+        document.querySelector('.etatpanier').innerHTML = l;
+        document.getElementById('fieldpay').style.display = "none";
+        //document.getElementsByClassName('produits-x').style.display = "inline-block";
+        //document.querySelector('.payl').insertAdjacentHTML('beforebegin',l);
+    } else {
+        //localStorage.setItem("prod_panier"," ");
+        l = `
+            <p class="inneretat"><h1>Votre panier est vide !</h1></p>
+        `;
+        document.querySelector('.etatpanier').innerHTML = l;
+        document.getElementById('fieldpay').style.display = "none";
+        //document.getElementsByClassName('produits-x').style.display = "inline-block";
+        //document.querySelector('.payl').insertAdjacentHTML('beforebegin',l);
+    }
+}
+
+function sup_prod(ring) {
+    document.getElementById(ring).style.display = "none";
+    localStorage.setItem(ring, "1");
+    g = localStorage.getItem("total_p");
+
+    if ((g == undefined) || (g == "") || (g == " ") || (g == "0")) {
+        g = "0";
+        localStorage.setItem("prod_panier", " ");
+        localStorage.setItem("delete-state", "1");
+    } else if (g != "0") {
+        k = parseInt(g) - 1;
+        if ((k <= 0)) g = "0";
+        if (k > 0) g = k + '';
+        if (k == 0) {
+            localStorage.setItem("prod_panier", " ");
+            localStorage.setItem("delete-state", "1");
+        }
+    } else {
+        localStorage.setItem("delete-state", "1");
+        localStorage.setItem("prod_panier", " ");
+    }
+
+    localStorage.setItem("total_p", g);
+    bouton_pan();
+    produits_panier();
+}
+/*prod = `
+            <tr id="prod-${i}" class="produits-x">
+                <td>${i+1} </td>
+                <td>${nprod}</td>
+                <td>${coul} </td>
+                <td>${prix}</td>
+                <td>${quantite}</td>
+                <td>${quantite*parseFloat(prix)}</td>
+                <td><button onclick="" class="but_modif">  📖🖊  </button></td>
+                <td><button onclick="sup_prod('prod-${i}')" class="but_sup"> 🚷 </button></td>
+            </tr>
+*/
+function download() {
+    n = 0;
+    td = localStorage.getItem("telechargements");
+
+    if (td == null) { td = "0" }
+
+    n += parseInt(td);
+    td = '' + n;
+
+    localStorage.setItem("telechargements", td);
+    let page = `
+    <div class="download-prod">
+        <h1>Merchant APP</h1>
+        <img src="logo.png" alt="Merchant APP" width="160px" height="160px">
+        <h2>Description : </h2>
+        <p>Application mobile androide   </br> </br>d'achats de produits en ligne.</p>
+        <h3> Notation :  <span>&#x2605;&#x2605;&#x2605;&#x2606;&#x2606;</span></h3><!--&#x2606; encodage etoile vide-->
+        <p>Nombre de téléchargements : ${localStorage.getItem("telechargements")}</p>
+    </div>
+    `;
+    document.querySelector('.download-prod').innerHTML = page;
+    document.getElementsByClassName('download-prod').style.display = "inline";
+}
+
+function count_download(n) {
+    page =`
+        <h2>Téléchargement en cours...</h2>
+    `
+    td = localStorage.getItem("telechargements");
+
+    if (td == null) { td = "0" }
+
+    n += parseInt(td);
+    td = '' + n;
+
+    localStorage.setItem("telechargements", td);
+    document.querySelector('.download-state').innerHTML = page;
+    document.getElementsByClassName('download-state').style.display = "inline";
+}
