@@ -1,1 +1,210 @@
 
+/*
+    le <body>
+*/
+
+body {
+    align-items: center;
+    align-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(212, 214, 215);
+}
+
+img {
+    align: center;
+    width: 250px;
+}
+
+
+/*
+    les éléments du header <header>
+*/
+
+.logo_site {
+    width: 25%;
+    height: 25%;
+}
+
+.page_header {
+    display: inline;
+}
+
+.sticky_div {
+    position: sticky;
+}
+
+.header_nav {
+    overflow: hidden;
+    background-color: #333;
+    text-align: right;
+}
+
+.emoji_panier {
+    font-size: 150%;
+}
+
+.button_nav {
+    opacity: 1.0;
+    background-color: rgb(6, 103, 103);
+    font-size: 100%;
+}
+
+.button_nav:hover {
+    background-color: blue;
+    opacity: 1.0;
+}
+
+.home_div_link {
+    width: 30%;
+    text-align: left;
+}
+
+.panier_link {
+    color: white;
+    font-weight: bold;
+}
+
+.button_link {
+    text-align: right;
+    margin-right: 5%;
+}
+
+#but_pan #notif {
+    position: absolute;
+    top: 2%;
+    padding: 1% 1%;
+    color: white;
+    border-radius: 45%;
+    background-color: red;
+}
+
+#nav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+
+/*-----------------------------------------------*/
+
+
+/*
+    les liens <a>
+*/
+
+
+/*-----------------------------------------------*/
+
+a {
+    /* pour mettre la valeur de underline à false*/
+    text-decoration: none;
+}
+
+
+/*-----------------------------------------------*/
+
+
+/*
+    les éléments du footer
+*/
+
+
+/*-----------------------------------------------*/
+
+.page_footer {
+    padding-left: 2% 15%;
+    text-align: center;
+    width: 100%;
+    color: white;
+    background-color: blueviolet;
+}
+
+.div_footer {
+    background-color: blueviolet;
+    display: block;
+    text-align: center;
+}
+
+.footer_inline_div {
+    background-color: blueviolet;
+}
+
+.copy_right {
+    background-color: blueviolet;
+    padding-top: 1%;
+}
+
+.footer_download {
+    background-color: #333;
+    text-align: center;
+    padding: 1%;
+}
+
+.download_apps {
+    color: white;
+}
+
+.conditions_rules {
+    color: white;
+}
+
+.cp_right {
+    text-align: center;
+    color: black;
+    padding-bottom: 1%;
+}
+
+.contact_mail {
+    color: white;
+}
+
+
+/*-----------------------------------------------*/
+
+
+/*
+    division de recherche produit
+*/
+
+.button_search {
+    background-color: rgb(133, 132, 131);
+    color: rgb(255, 255, 255);
+    opacity: 0.5;
+}
+
+.button_search:hover {
+    background-color: green;
+    opacity: 1.0;
+}
+
+.input_search {
+    color: rgb(17, 17, 17);
+    border-color: rgb(37, 41, 44);
+    opacity: 0.5;
+}
+
+.input_search:hover {
+    border-color: rgb(31, 30, 30);
+    color: rgb(17, 17, 17);
+    opacity: 1.0;
+}
+
+
+/*
+    Définition globale pour les bouttons 
+*/
+
+button {
+    border-radius: 30%;
+    padding: 1%;
+    margin: 1%;
+}
+
+#stylenone {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    font-weight: bold;
+}
