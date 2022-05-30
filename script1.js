@@ -423,6 +423,7 @@ function count_download(n) {
     localStorage.setItem("telechargements", td);
     document.querySelector('.download-state').innerHTML = page;
     document.getElementsByClassName('download-state').style.display = "inline";
+    end();
 }
 function end(){
     page =`
