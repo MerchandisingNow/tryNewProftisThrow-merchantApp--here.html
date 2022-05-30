@@ -3,7 +3,7 @@
 //localStorage.setItem("panier",pan);
 //localStorage.setItem("prod_panier","");
 //localStorage.setItem("total_p","0");
-localStorage.setItem("telechargements",);
+localStorage.setItem("telechargements","0");
 //affichage_produit.html.querySelector('article_for_image').innerHTML = ;
 let j = 0;
 let i = 0;
@@ -390,7 +390,7 @@ function download() {
     n = 0;
     td = localStorage.getItem("telechargements");
 
-    if (td == null) { td = "0" }
+    if ((td == null) || td.includes("0")) { td = "0" }
 
     n += parseInt(td);
     td = '' + n;
@@ -413,7 +413,7 @@ function download() {
 function count_download(n) {
     td = localStorage.getItem("telechargements");
 
-    if (td == null) { td = "0" }
+    if ((td == null) || td.includes("0")) { td = "0" }
 
     n += parseInt(td);
     td = '' + n;
