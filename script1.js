@@ -386,3 +386,37 @@ function sup_prod(ring) {
                 <td><button onclick="sup_prod('prod-${i}')" class="but_sup"> 🚷 </button></td>
             </tr>
 */
+function download() {
+    n = 0;
+    td = localStorage.getItem("telechargements");
+
+    if (td == null) { td = "0" }
+
+    n += parseInt(td);
+    td = '' + n;
+
+    localStorage.setItem("telechargements", td);
+    let page = `
+    <div class="download-prod">
+        <h1>Merchant APP</h1>
+        <img src="logo.png" alt="Merchant APP" width="160px" height="160px">
+        <h2>Description : </h2>
+        <p>Application mobile androide   </br> </br>d'achats de produits en ligne.</p>
+        <h3> Notation :  <span>&#x2605;&#x2605;&#x2605;&#x2606;&#x2606;</span></h3><!--&#x2606; encodage etoile vide-->
+        <p>Nombre de téléchargements : ${localStorage.getItem("telechargements")}</p>
+    </div>
+    `;
+    document.querySelector('.download-prod').innerHTML = page;
+    document.getElementsByClassName('download-prod').style.display = "inline";
+}
+
+function count_download(n) {
+    td = localStorage.getItem("telechargements");
+
+    if (td == null) { td = "0" }
+
+    n += parseInt(td);
+    td = '' + n;
+
+    localStorage.setItem("telechargements", td);
+}
