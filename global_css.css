@@ -10,8 +10,7 @@ body {
 }
 
 img {
-    min-width: 150px;
-    max-width: max-content;
+    width: max-content;
 }
 
 
