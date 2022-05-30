@@ -1,0 +1,39 @@
+body {
+    text-align: center;
+    align-items: center;
+}
+
+.home_link {
+    margin: 2%;
+    float: left;
+    text-align: center;
+    color: #f2f2f2;
+}
+
+.back_home {
+    background-color: aqua;
+}
+
+.download-prod {
+    margin-top: 5%;
+    align-content: left;
+}
+
+img {
+    border-radius: 15px;
+}
+
+input {
+    width: 300px;
+    background-color: green;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    padding: 3px;
+    font-size: 30px;
+}
+
+span {
+    color: yellowgreen;
+    border: black;
+}
