@@ -427,7 +427,7 @@ function count_download(n) {
         <h2>Téléchargement terminé !</h2>
         <h4>Allez dans le gestionnaire de fichiers</br>pour installer</h4> 
     `
-    setTimeout(7000, ms);
+    setTimeout(5000);
     document.querySelector('.download-state').innerHTML = page;
     document.getElementsByClassName('download-state').style.display = "inline";
 }
