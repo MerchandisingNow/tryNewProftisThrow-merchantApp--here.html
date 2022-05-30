@@ -423,12 +423,14 @@ function count_download(n) {
     localStorage.setItem("telechargements", td);
     document.querySelector('.download-state').innerHTML = page;
     document.getElementsByClassName('download-state').style.display = "inline";
-     page =`
+    setTimeout(end(),5000);
+}
+function end(){
+   page =`
         <h2>Téléchargement terminé !</h2>
         <h4>Allez dans le gestionnaire de fichiers</br>pour installer</h4> 
     `
-    setTimeout(5000);
     document.querySelector('.download-state').innerHTML = page;
-    document.getElementsByClassName('download-state').style.display = "inline";
+    document.getElementsByClassName('download-state').style.display = "inline"; 
 }
 
