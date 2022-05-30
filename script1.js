@@ -431,6 +431,6 @@ function end(){
         <h4>Allez dans le gestionnaire de fichiers</br>pour installer</h4> 
     `
     setTimeout(7000, ms);
-    document.querySelector('.download-state p').innerHTML = page;
+    document.querySelector('.download-state').innerHTML = page;
     document.getElementsByClassName('download-state').style.display = "inline";
 }
