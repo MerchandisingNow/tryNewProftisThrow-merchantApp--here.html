@@ -1,9 +1,9 @@
 //document.querySelector('.image-display').innerHTML = card;
 
 //localStorage.setItem("panier",pan);
-//localStorage.setItem("prod_panier","");
-//localStorage.setItem("total_p","0");
-//localStorage.setItem("telechargements", "0");
+localStorage.setItem("prod_panier","");
+localStorage.setItem("total_p","0");
+localStorage.setItem("telechargements", "0");
 
 //affichage_produit.html.querySelector('article_for_image').innerHTML = ;
 let j = 0;
