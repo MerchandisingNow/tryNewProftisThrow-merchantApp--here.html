@@ -147,6 +147,7 @@ a {
 }
 
 .cp_right {
+    text-align: center;
     color: black;
     padding-bottom: 1%;
 }
