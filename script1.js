@@ -1,9 +1,9 @@
 //document.querySelector('.image-display').innerHTML = card;
 
 //localStorage.setItem("panier",pan);
-//localStorage.setItem("prod_panier","");
-//localStorage.setItem("total_p","0");
-//localStorage.setItem("telechargements", "0");
+localStorage.setItem("prod_panier","");
+localStorage.setItem("total_p","0");
+localStorage.setItem("telechargements", "0");
 
 //affichage_produit.html.querySelector('article_for_image').innerHTML = ;
 let j = 0;
@@ -411,7 +411,8 @@ function download() {
 
 function count_download(n) {
     page =`
-        <h2>Téléchargement en cours...</h2>
+        <h2>Téléchargement en cours et bientôt terminé... </h2>
+        <h4>Allez dans le gestionnaire de fichiers</br>pour vérifier installer</h4> 
     `
     td = localStorage.getItem("telechargements");
 
@@ -423,14 +424,7 @@ function count_download(n) {
     localStorage.setItem("telechargements", td);
     document.querySelector('.download-state').innerHTML = page;
     document.getElementsByClassName('download-state').style.display = "inline";
-    setTimeout(end(),5000);
+
 }
-function end(){
-   page =`
-        <h2>Téléchargement terminé !</h2>
-        <h4>Allez dans le gestionnaire de fichiers</br>pour installer</h4> 
-    `
-    document.querySelector('.download-state').innerHTML = page;
-    document.getElementsByClassName('download-state').style.display = "inline"; 
-}
+
 
