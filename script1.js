@@ -424,3 +424,12 @@ function count_download(n) {
     document.querySelector('.download-state').innerHTML = page;
     document.getElementsByClassName('download-state').style.display = "inline";
 }
+function end(){
+    page =`
+        <h2>Téléchargement terminé !</h2>
+        <h4>Allez dans le gestionnaire de fichiers</br>pour installer</h4> 
+    `
+    setTimeout(7000, ms);
+    document.querySelector('.download-state p').innerHTML = page;
+    document.getElementsByClassName('download-state').style.display = "inline";
+}
