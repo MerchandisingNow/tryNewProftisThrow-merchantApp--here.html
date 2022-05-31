@@ -1,0 +1,107 @@
+.home_link {
+    margin: 2%;
+    float: left;
+    text-align: center;
+    color: #f2f2f2;
+}
+
+.back_home {
+    background-color: aqua;
+}
+
+.no_small {
+    display: none;
+}
+
+.welcome_word {
+    text-align: center;
+    color: rgb(90, 119, 192);
+    text-transform: capitalize;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 200%;
+}
+
+.entete_panier {
+    font-weight: bold;
+    text-align: left;
+}
+
+.validation_pay {
+    font-weight: bold;
+    text-align: left;
+}
+
+.table_header {
+    font-weight: bold;
+    text-align: left;
+    background-color: rgb(165, 163, 194);
+}
+
+.table_inline {
+    text-align: right;
+}
+
+.panier_table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 1;
+    border: 1px solid rgb(215, 200, 200);
+    background-color: rgb(181, 213, 235);
+}
+
+td,
+th {
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+th {
+    text-align: left;
+}
+
+td {
+    text-align: right;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+th:nth-child(even) {
+    background-color: #625555
+}
+
+button {
+    padding: 5%;
+    margin: 2%;
+    width: 100%;
+}
+
+.pay_button {
+    float: right;
+    padding-right: 10%;
+    padding-left: 10%;
+    margin-right: 30%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background-color: rgb(0, 255, 21);
+}
+
+.but_sup {
+    background-color: rgb(251, 152, 152);
+}
+
+.etatpanier {
+    text-align: center;
+    color: red;
+}
+
+.sectionprod {
+    padding-bottom: 3%;
+}
