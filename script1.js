@@ -25,7 +25,7 @@ function div_frame(String) {
         /*
             Alt+Ctrl + 7 => `` sur clavier (AZERTY)
         */
-        if ((String == 'Vêtements') || (String.includes('habi')) || (String.includes('vêtement'))) {
+        if ((String == 'Vêtements') || (String.includes('habi')) || (String.includes('Habi')) || (String.includes('vêtement'))) {
             frame = `
                 <div class="iframe">
                     <h3>${String}</h3> 
@@ -47,7 +47,7 @@ function div_frame(String) {
                 </div>
             `;
         }
-        if ((String == 'Jouets') || (String.includes('jeu')) || (String.includes('joue')) || (String.includes('game'))) {
+        if ((String == 'Jouets') || (String.includes('jeu')) || (String.includes('Jeu')) || (String.includes('Joue'))|| (String.includes('joue')) || (String.includes('game'))|| (String.includes('Game'))) {
             frame = `
                 <div class="iframe">
                     <h3>${String}</h3> 
@@ -91,7 +91,7 @@ function div_frame(String) {
                 </div>
             `;
         }
-        if ((String.includes('ordi')) || (String.includes('pc'))) {
+        if ((String.includes('ordi')) || (String.includes('pc'))|| (String.includes('PC'))|| (String.includes('Pc'))) {
             frame = `
                 <div class="iframe">
                     <h3>${String}</h3> 
@@ -132,7 +132,7 @@ function div_frame(String) {
             </div>
         `;
         }
-        if ((String.includes('gâteau')) || (String.includes('gateau')) || (String.includes('nour')) || (String.includes('mang')) || (String.includes('choco')) || (String.includes('fraise'))) {
+        if ((String.includes('gâteau')) || (String.includes('gateau')) || (String.includes('nour')) || (String.includes('Nour')) || (String.includes('ocolat')) || (String.includes('mang')) || (String.includes('choco')) || (String.includes('Choco')) || (String.includes('fraise'))) {
             frame = `
                 <div class="iframe">
                     <h3>${String}</h3> 
@@ -264,7 +264,8 @@ function ajout_panier() {
     pa = "" + (i + 1);
     f = "prod-" + pa;
     
-    if(devise.includes("XAF") || devise.includes("af")) pta +=(pt/600);
+    if(devise.includes("XAF") || devise.includes("af")) pta = (pt/600);
+    if(devise.includes("$")) pta = pt;
 
     prod = prod1 + `
         <tr id="prod-${pa}" class="produits-x">
@@ -386,7 +387,7 @@ function sup_prod(ring, j) {
     
     prit = localStorage.getItem("tl_prix");
     
-    if ((prit == null) || (prit == undefined) || (prit == "0")) prix = 0;
+    if ((prit == null) || (prit == undefined) || (prit == "0")) prit = "0";
     prix = Number.parseFloat(prit);
     
     prix -= j;
@@ -432,7 +433,7 @@ function download() {
 
 function count_download(n) {
     page =`
-        <h2>Téléchargement en cours et bientôt terminé... </h2>
+        <h2>Le téléchargement sera bientôt terminé... </h2>
         <h4>Allez dans le gestionnaire de fichiers</br>pour vérifier et installer</h4> 
     `
     td = localStorage.getItem("telechargements");
