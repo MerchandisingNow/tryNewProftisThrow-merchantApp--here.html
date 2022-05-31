@@ -241,7 +241,7 @@ function ajout_panier() {
     prit = localStorage.getItem("total_prix");
     
     if ((prit == null) || (prit == undefined) || (prit == "0")) prix_t = 0;
-    prix_t = parseFloat(prit);
+    prix_t = Number.parseFloat(prit);
 
     sourc_p = document.getElementById('imagedisp').src;
 
@@ -387,7 +387,7 @@ function sup_prod(ring, j) {
     prit = localStorage.getItem("total_prix");
     
     if ((prit == null) || (prit == undefined) || (prit == "0")) prix = 0;
-    prix = parseFloat(prit);
+    prix = Number.parseFloat(prit);
     
     prix -= j;
     
