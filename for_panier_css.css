@@ -12,7 +12,9 @@
 table .no_small {
     display: none;
 }
-
+.total_prix{
+    color: green;
+}
 .welcome_word {
     text-align: center;
     color: rgb(90, 119, 192);
