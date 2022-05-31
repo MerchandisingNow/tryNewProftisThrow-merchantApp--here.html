@@ -237,6 +237,11 @@ function ajout_panier() {
     nprod = document.getElementById('lib').innerHTML;
     devise = document.getElementById('unit').innerHTML;
     pu = Number.parseFloat(prix);
+    prix_t = 0;
+    prit = localStorage.getItem("total_prix");
+    
+    if ((prit == null) || (prit == undefined) || (prit == "0")) prix_t = 0;
+    prix
 
     sourc_p = document.getElementById('imagedisp').src;
 
@@ -270,6 +275,7 @@ function ajout_panier() {
         <td><button onclick="sup_prod('prod-${pa}')" class="but_sup"> 🚷 </button></td>
         </tr>
     `;
+    localStorage.setItem("total_prix",prit);
     localStorage.setItem("prod_panier", prod);
     //localStorage.setItem("prod_panier", '');
     i = i + 1;
