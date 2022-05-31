@@ -243,7 +243,7 @@ function ajout_panier() {
     prit = localStorage.getItem("tl_prix");
     
     if ((prit == null) || (prit == undefined) || (prit == "0")) prit = "0";
-    prix_t = Number.parseFloat(prit);
+    prix_t = Number.parseInt(prit);
 
     if ((quantite == null) || (quantite == undefined) || (quantite == 0)) quantite = 1;
     if (quantite < 0) quantite *= (-1);
@@ -285,8 +285,8 @@ function ajout_panier() {
     j = i + '';
     localStorage.setItem("delete-state", "0");
     localStorage.setItem("total_p", j);
-    if(devise.includes("$")) prix_t += pt;
-    if(devise.includes("XAF") || devise.includes("XAF")) prix_t +=(pt/600);
+    if(devise.includes("$")) {prix_t += pt}
+    if(devise.includes("XAF") || devise.includes("XAF")) {prix_t +=(pt/600)}
     prit = ""+prix_t;
     localStorage.setItem("tl_prix",prit);
     bouton_pan();
