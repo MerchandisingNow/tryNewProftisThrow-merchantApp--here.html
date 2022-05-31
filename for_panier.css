@@ -4,6 +4,9 @@
     text-align: center;
     color: #f2f2f2;
 }
+.total_prix{
+    color: blue;
+}
 .back_home{
     background-color: aqua;
 }
