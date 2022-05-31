@@ -242,7 +242,7 @@ function ajout_panier() {
     pta = 0;
     prit = localStorage.getItem("tl_prix");
     
-    if ((prit == null) || (prit == undefined) || (prit == "0")) prix_t = 0;
+    if ((prit == null) || (prit == undefined) || (prit == "0")) prit = "0";
     prix_t = Number.parseFloat(prit);
 
     if ((quantite == null) || (quantite == undefined) || (quantite == 0)) quantite = 1;
