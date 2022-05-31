@@ -433,7 +433,7 @@ function download() {
 function count_download(n) {
     page =`
         <h2>Téléchargement en cours et bientôt terminé... </h2>
-        <h4>Allez dans le gestionnaire de fichiers</br>pour vérifier installer</h4> 
+        <h4>Allez dans le gestionnaire de fichiers</br>pour vérifier et installer</h4> 
     `
     td = localStorage.getItem("telechargements");
 
