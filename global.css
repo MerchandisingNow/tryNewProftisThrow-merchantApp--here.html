@@ -7,7 +7,10 @@ body {
     background-color: rgb(212, 214, 215);
 }
 
-
+img{
+    height: 210px;
+    width: 240px;
+}
 /*
     les éléments du header <header>
 */
