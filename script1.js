@@ -263,11 +263,10 @@ function ajout_panier() {
         <tr id="prod-${pa}" class="produits-x">
         <td id="numero-${i+1}">${pa} </td>
         <td>${nprod}</td>
-        <td>${coul} </td>
-        <td>${prix}</td>
+        <td class="no_small">${coul} </td>
+        <td class="no_small">${prix}</td>
         <td>${quantite}</td>
-        <td>${pt} ${devise}</td>
-        <td><button onclick="modif_prod(${sourc_p},${f})" class="but_modif"><a target="_parent" href="affichage_produit.html">  📖🖊  </a></button></td>
+        <td class="no_small">${pt} ${devise}</td>
         <td><button onclick="sup_prod('prod-${pa}')" class="but_sup"> 🚷 </button></td>
         </tr>
     `;
@@ -281,11 +280,6 @@ function ajout_panier() {
     return;
 }
 
-function modif_prod(String1, String2) {
-    sup_prod(String2);
-    localStorage.setItem("srcval", String1);
-    //localStorage.setItem("prod_modif","1");
-}
 /*
 function after_sup(){
     let w = 0;
