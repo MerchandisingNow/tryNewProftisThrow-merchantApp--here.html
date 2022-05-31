@@ -238,7 +238,7 @@ function ajout_panier() {
     nprod = document.getElementById('lib').innerHTML;
     devise = document.getElementById('unit').innerHTML;
     pu = Number.parseFloat(prix);
-    prix_t = 0;
+    prix_t = 0.0;
     pta = 0;
     prit = localStorage.getItem("tl_prix");
     
