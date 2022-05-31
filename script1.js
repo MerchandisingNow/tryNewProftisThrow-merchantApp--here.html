@@ -241,7 +241,7 @@ function ajout_panier() {
     prit = localStorage.getItem("total_prix");
     
     if ((prit == null) || (prit == undefined) || (prit == "0")) prix_t = 0;
-    prix
+    prix_t = parseFloat(prit);
 
     sourc_p = document.getElementById('imagedisp').src;
 
@@ -263,6 +263,8 @@ function ajout_panier() {
     }
     pa = "" + (i + 1);
     f = "prod-" + pa;
+    
+    if(devise.includes("XAF") || devise.includes("af")) pta +=(pt/600);
 
     prod = prod1 + `
         <tr id="prod-${pa}" class="produits-x">
@@ -272,9 +274,14 @@ function ajout_panier() {
         <td class="no_small">${prix}</td>
         <td>${quantite}</td>
         <td class="no_small">${pt} ${devise}</td>
-        <td><button onclick="sup_prod('prod-${pa}')" class="but_sup"> 🚷 </button></td>
+        <td><button onclick="sup_prod('prod-${pa}',${pta})" class="but_sup"> 🚷 </button></td>
         </tr>
     `;
+    if(devise.includes("$")) prix_t += pt;
+    if(devise.includes("XAF") || devise.includes("XAF")) prix_t +=(pt/600);
+    
+    prit = ""+prix_t;
+    
     localStorage.setItem("total_prix",prit);
     localStorage.setItem("prod_panier", prod);
     //localStorage.setItem("prod_panier", '');
@@ -347,7 +354,7 @@ function produits_panier() {
     }
 }
 
-function sup_prod(ring) {
+function sup_prod(ring, j) {
     document.getElementById(ring).style.display = "none";
     localStorage.setItem(ring, "1");
     g = localStorage.getItem("total_p");
@@ -372,6 +379,16 @@ function sup_prod(ring) {
     localStorage.setItem("total_p", g);
     bouton_pan();
     produits_panier();
+    
+    prit = localStorage.getItem("total_prix");
+    
+    if ((prit == null) || (prit == undefined) || (prit == "0")) prix = 0;
+    prix = parseFloat(prit);
+    
+    prix -= j;
+    
+    prit =""+prix;
+    localStorage.setItem("total_prix",prit);
 }
 /*prod = `
             <tr id="prod-${i}" class="produits-x">
