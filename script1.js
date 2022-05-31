@@ -3,6 +3,7 @@
 //localStorage.setItem("panier",pan);
 //localStorage.setItem("prod_panier","");
 //localStorage.setItem("total_p","0");
+localStorage.setItem("tl_prix","");
 //localStorage.setItem("telechargements", "0");
 
 //affichage_produit.html.querySelector('article_for_image').innerHTML = ;
@@ -238,6 +239,7 @@ function ajout_panier() {
     devise = document.getElementById('unit').innerHTML;
     pu = Number.parseFloat(prix);
     prix_t = 0;
+    pta = 0;
     prit = localStorage.getItem("tl_prix");
     
     if ((prit == null) || (prit == undefined) || (prit == "0")) prix_t = 0;
@@ -275,18 +277,18 @@ function ajout_panier() {
         <td><button onclick="sup_prod('prod-${pa}',${pta})" class="but_sup"> 🚷 </button></td>
         </tr>
     `;
-    if(devise.includes("$")) prix_t += pt;
-    if(devise.includes("XAF") || devise.includes("XAF")) prix_t +=(pt/600);
     
-    prit = ""+prix_t;
     
-    localStorage.setItem("tl_prix",prit);
     localStorage.setItem("prod_panier", prod);
     //localStorage.setItem("prod_panier", '');
     i = i + 1;
     j = i + '';
     localStorage.setItem("delete-state", "0");
     localStorage.setItem("total_p", j);
+    if(devise.includes("$")) prix_t += pt;
+    if(devise.includes("XAF") || devise.includes("XAF")) prix_t +=(pt/600);
+    prit = ""+prix_t;
+    localStorage.setItem("tl_prix",prit);
     bouton_pan();
     return;
 }
