@@ -9,6 +9,10 @@
     background-color: aqua;
 }
 
+table{
+    font-size: 15px;
+}
+
 table .no_small {
     display: none;
 }
