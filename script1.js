@@ -317,6 +317,9 @@ function after_sup(){
 function produits_panier() {
     //localStorage.setItem("prod_modif","0");
     let z = 0;
+    prixt = `
+        <h2>Prix total du panier : ${localStorage.getItem("total_prix")} $</h2>
+    `;
     line = localStorage.getItem("prod_panier");
     n = localStorage.getItem("total_p");
     p = parseInt(n);
@@ -332,6 +335,7 @@ function produits_panier() {
                 document.getElementById(x).style.display = "none";
             }
         }
+        document.querySelector('.total_prix').innerHTML = prixt;
         //after_sup();
     } else if (localStorage.getItem("delete-state") == "1") {
         //localStorage.setItem("prod_panier"," ");
