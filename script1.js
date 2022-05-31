@@ -309,7 +309,7 @@ function produits_panier() {
     p = parseInt(n);
     if ((line != null) && (line != " ")) {
         document.querySelector('.produits-x').insertAdjacentHTML('afterend', line);
-        document.getElementsByClassName('produits-x').style.display = "inline";
+        //document.getElementsByClassName('produits-x').style.display = "inline";
 
         for (z = 0; z <= p; z++) {
             x = "prod-" + z;
