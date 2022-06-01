@@ -9,6 +9,9 @@
 //affichage_produit.html.querySelector('article_for_image').innerHTML = ;
 let j = 0;
 let i = 0;
+if ((localStorage.getItem("total_p") == "0") || (localStorage.getItem("total_p") == null) || (localStorage.getItem("total_p") == "")) {
+    localStorage.setItem("tl_prix","0");
+}
 
 const JSONParser = require('formidable/src/parsers/JSON');
 const { JSON } = require('mysql/lib/protocol/constants/types');
